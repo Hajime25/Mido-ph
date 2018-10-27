@@ -6,7 +6,6 @@ simple to use.
 
 Can be found on telegram as [mido-ph](https://t.me/MidoPH_bot).
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Hajime25/SkittBot) 
 
 Marie and I are moderating a [support group](https://t.me/MarieSupport), where you can ask for help setting up your
 bot, discover/request new features, report bugs, and stay in the loop whenever a new update is available. Of course
@@ -173,3 +172,5 @@ it is necessary to migrate it in the db.
 
 The `__stats__()` function is for retrieving module statistics, eg number of users, number of chats. This is accessed 
 through the `/stats` command, which is only available to the bot owner.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Hajime25/SkittBot) 
