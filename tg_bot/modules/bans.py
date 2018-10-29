@@ -58,14 +58,14 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("Try targeting a user next time bud.")
+        message.reply_text("Try targeting a user next time par.")
         return ""
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("This user is ded mate.")
+            message.reply_text("This user is ded tol.")
             return ""
         else:
             raise
@@ -76,7 +76,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
         return ""
 
     if user_id == bot.id:
-        message.reply_text("You can't ban the ＴＨＯＮＫ！")
+        message.reply_text("You can't ban this ＢＯＩ！")
         return ""
 
     log = "<b>{}:</b>" \
@@ -104,7 +104,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
             LOGGER.warning(update)
             LOGGER.exception("ERROR banning user %s in chat %s (%s) due to %s", user_id, chat.title, chat.id,
                              excp.message)
-            message.reply_text("Heck'n heck, I can't ban that user.")
+            message.reply_text("Heck'n heck, Di ko siya kaya ma-ban.")
 
     return ""
 
@@ -122,29 +122,29 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("Try targeting a user next time bud.")
+        message.reply_text("Try targeting a user next time par.")
         return ""
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("This user is ded mate.")
+            message.reply_text("This user is ded tol.")
             return ""
         else:
             raise
 
     if is_user_ban_protected(chat, user_id, member):
-        message.reply_text("One day I'll find out how to work around the bot API. " 
+        message.reply_text("One day I'll find out how to work around the bot API tol. " 
                            "Today is not that day.")
         return ""
 
     if user_id == bot.id:
-        message.reply_text("You can't ban the ＴＨＯＮＫ！")
+        message.reply_text("You can't ban this ＢＯＩ！")
         return ""
 
     if not reason:
-        message.reply_text("I don't know how long I'm supposed to ban them for 🤔.")
+        message.reply_text("I don't know how long I'm supposed to ban them for.")
         return ""
 
     split_reason = reason.split(None, 1)
@@ -187,7 +187,7 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
             LOGGER.warning(update)
             LOGGER.exception("ERROR banning user %s in chat %s (%s) due to %s", user_id, chat.title, chat.id,
                              excp.message)
-            message.reply_text("Heck'n heck, I can't ban that user.")
+            message.reply_text("Heck'n heck, Di ko siya kaya ma-ban.")
 
     return ""
 
@@ -211,13 +211,13 @@ def kick(bot: Bot, update: Update, args: List[str]) -> str:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("This user is ded mate.")
+            message.reply_text("This user is ded par.")
             return ""
         else:
             raise
 
     if is_user_ban_protected(chat, user_id):
-        message.reply_text("One day I'll find out how to work around the bot API. " 
+        message.reply_text("One day I'll find out how to work around the bot API tol. " 
                            "Today is not that day.")
         return ""
 
@@ -282,7 +282,7 @@ def unban(bot: Bot, update: Update, args: List[str]) -> str:
         member = chat.get_member(user_id)
     except BadRequest as excp:
         if excp.message == "User not found":
-            message.reply_text("This user is ded mate.")
+            message.reply_text("This user is ded tol.")
             return ""
         else:
             raise
